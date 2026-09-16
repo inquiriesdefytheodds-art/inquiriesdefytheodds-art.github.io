@@ -6,7 +6,7 @@
   "scripts": {
     "start": "eleventy --serve",
     "build": "eleventy",
-    "build-ghpages": "eleventy --pathprefix=/DTO/"
+    "build-ghpages": "eleventy"
   },
   "author": "Defy the Odds",
   "license": "ISC",
