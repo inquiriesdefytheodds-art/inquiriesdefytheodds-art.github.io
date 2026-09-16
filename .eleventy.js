@@ -1,3 +1,5 @@
+const { HtmlBasePlugin } = require("@11ty/eleventy");
+
 module.exports = function (eleventyConfig) {
   // Ignore stale build output accidentally left inside src/
   eleventyConfig.ignores.add("src/_site/**");
@@ -6,6 +8,8 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy("src/js");
   eleventyConfig.addPassthroughCopy("src/images");
   eleventyConfig.addPassthroughCopy("src/robots.txt");
+  
+  eleventyConfig.addPlugin(HtmlBasePlugin);
 
   return {
     dir: {
