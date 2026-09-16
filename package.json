@@ -1,0 +1,17 @@
+{
+  "name": "defy-the-odds-mainsite",
+  "version": "1.0.0",
+  "description": "The main site for Defy the Odds",
+  "main": "index.js",
+  "scripts": {
+    "start": "eleventy --serve",
+    "build": "eleventy",
+    "build-ghpages": "eleventy --pathprefix=/DTO/"
+  },
+  "author": "Defy the Odds",
+  "license": "ISC",
+  "keywords": [],
+  "devDependencies": {
+    "@11ty/eleventy": "^3.1.6"
+  }
+}

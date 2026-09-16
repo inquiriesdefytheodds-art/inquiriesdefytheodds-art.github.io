@@ -1,0 +1,17 @@
+{% set isEs = lang == 'es' %}
+{% set prefix = '/es' if isEs else '' %}
+<header id="site-header">
+  <a href="{{ prefix }}/" class="img-btn" aria-label="Home">
+    <img id="headerlogo" src="/images/logo.png" alt="Home" width="65" />
+  </a>
+  <div class="nav">
+    <nav>
+      {% for item in navigation %}
+        {% set href = prefix ~ '/' if item.slug == '' else prefix ~ '/' ~ item.slug ~ '/' %}
+        {% set label = item.es if isEs else item.en %}
+        <a href="{{ href }}" class="nav-link{% if item.hideMobile %} a1out{% endif %}{% if page.url == href %} active{% endif %}">{{ label }}</a>
+      {% endfor %}
+    </nav>
+  </div>
+  <a class="lang" id="langBtn" href="{{ altUrl or ('/' if isEs else '/es/') }}">{{ altLabel or ('English' if isEs else 'Español') }}</a>
+</header>

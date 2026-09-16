@@ -1,0 +1,10 @@
+{
+  "name": "Defy the Odds",
+  "description": "The main site for Defy the Odds",
+  "url": "https://example.com",
+  "author": "Defy the Odds",
+  "social": {
+    "twitter": "https://twitter.com/example",
+    "github": "https://github.com/example"
+  }
+}
