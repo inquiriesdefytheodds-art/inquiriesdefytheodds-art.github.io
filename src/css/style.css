@@ -106,16 +106,44 @@ header nav {
     display: none;
   }
 
-  /* Nav gets its own full-width row below logo + lang,
-     links spread evenly instead of squeezed in the middle */
+  /* Single row: shrink everything, never wrap */
+  header {
+    flex-wrap: nowrap;
+    gap: 6px;
+    padding: 8px;
+  }
+
   header .nav {
-    order: 3;
-    flex-basis: 100%;
+    flex: 1;
+    min-width: 0;
   }
 
   header nav {
-    width: 100%;
-    justify-content: space-evenly;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    overflow-x: auto;
+    scrollbar-width: none;
+  }
+
+  header nav::-webkit-scrollbar {
+    display: none;
+  }
+
+  #headerlogo {
+    width: 50px;
+    height: auto;
+  }
+
+  .nav-link {
+    font-size: 11px;
+    padding: 6px 7px;
+    white-space: nowrap;
+  }
+
+  .lang {
+    font-size: 11px;
+    padding: 6px 8px;
+    white-space: nowrap;
   }
 }
 
@@ -176,6 +204,9 @@ main {
   font-weight: 800;
   font-size: 13px;
 }
+
+
+
 
 h1 {
   font-size: clamp(38px, 6vw, 66px);
@@ -238,7 +269,7 @@ h3 {
 }
 
 .section {
-  padding: 80px 0;
+  padding: 65px 0;
 }
 
 .center {
@@ -283,6 +314,11 @@ a.card:hover {
   margin-top: 10px;
   font-weight: 800;
   color: var(--nav-hover);
+}
+
+/* CHANGED 2026-09-16: index page only — center the card titles */
+.center-h3 h3 {
+  text-align: center;
 }
 
 .icon {
@@ -503,6 +539,11 @@ footer {
     grid-template-columns: 1fr;
   }
 
+  .section {
+    padding: 10px 0;
+  }
+
+
   /* CHANGED 2026-09-16: phone hero layout —
      1) keep h1 pinned top with bigger size + more padding (headline up)
      2) .hero-sub is now its own container pushed to the bottom like desktop (sub text + buttons down)
@@ -526,8 +567,8 @@ footer {
   .hero-bg .hero-headline h1 {
     margin-top: 0;
     margin-bottom: 0;
-    /* CHANGED: headline size trimmed to fit 2 lines on phones (was 44px/12vw/60px = 3 lines) */
-    font-size: clamp(40px, 12vw, 50px);
+    /* CHANGED 2026-09-16: smaller so the headline fits in 3 lines on phones (was 40px/12vw/50px = 4 lines) */
+    font-size: clamp(32px, 10vw, 38px);
     line-height: 1.08;
   }
 
@@ -544,6 +585,23 @@ footer {
     margin-top: 0;
     padding-top: 0;
     font-size: 17px;
+  }
+
+  /* One line: smaller buttons, no wrapping */
+  .hero-sub .buttons {
+    flex-wrap: nowrap;
+    gap: 8px;
+  }
+
+  .hero-sub .btn {
+    white-space: nowrap;
+    font-size: 12px;
+    padding: 10px 8px;
+  }
+
+  /* CHANGED 2026-09-16: smaller so "Educate • Empower • Elevate" fits on one line on phones */
+  .section.center h2 {
+    font-size: 20px;
   }
 
   .cards {
