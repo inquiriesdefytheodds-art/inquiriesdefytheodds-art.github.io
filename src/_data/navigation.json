@@ -1,9 +1,9 @@
 [
-  { "slug": "about", "en": "About", "es": "Nosotros", "hideMobile": false },
-  { "slug": "programs", "en": "Programs", "es": "Programas", "hideMobile": false },
+  { "slug": "about", "en": "About", "es": "Nosotros" },
+  { "slug": "programs", "en": "Programs", "es": "Programas" },
   { "slug": "impact", "en": "Impact", "es": "Impacto", "hideMobile": true },
   { "slug": "stories", "en": "Stories", "es": "Historias", "hideMobile": true },
   { "slug": "sponsors", "en": "Sponsors", "es": "Patrocinadores", "hideMobile": true },
-  { "slug": "donate", "en": "Donate", "es": "Donar", "hideMobile": false },
-  { "slug": "contact", "en": "Contact", "es": "Contacto", "hideMobile": false }
+  { "slug": "donate", "en": "Donate", "es": "Donar" },
+  { "slug": "contact", "en": "Contact", "es": "Contacto" }
 ]

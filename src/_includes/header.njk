@@ -9,7 +9,7 @@
       {% for item in navigation %}
         {% set href = prefix ~ '/' if item.slug == '' else prefix ~ '/' ~ item.slug ~ '/' %}
         {% set label = item.es if isEs else item.en %}
-        <a href="{{ href }}" class="nav-link{% if item.hideMobile %} a1out{% endif %}{% if page.url == href %} active{% endif %}">{{ label }}</a>
+        <a href="{{ href }}" class="nav-link{% if item.hideMobile %} hide-mobile{% endif %}{% if page.url == href %} active{% endif %}">{{ label }}</a>
       {% endfor %}
     </nav>
   </div>
